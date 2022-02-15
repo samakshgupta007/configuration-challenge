@@ -6,41 +6,25 @@ To package and run this application, you'll need to:
 
 - Clone this repository:
 
-      $ git clone https://github.com/samakshgupta007/transactions-api.git
+      $ git clone https://github.com/samakshgupta007/configuration-challenge.git
       $ cd configuration-challenge
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
+### Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+### Using the Library
 
-```bash
-# development
-$ npm run start
+Import the 'fetchConfigurations' function from the srx/index.js file. This function can be called with an array of file names on disk. For reference, a few example files have been included in the repository - also to help with testing.
 
-# watch mode
-$ npm run start:dev
+The 'fetchConfigurations' can be called with an array of any files on disk and return a JSON with the configuration details - with the latest files overriding the previous ones, if need be. For the returned object, it is possible to retrieve parts of the configuration by a dot-separated path; this works for both sections and for individual keys, no matter how deeply nested.
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
+### Test
 
 ```bash
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
-
-Running specific tests - npm run test -t "amp"
